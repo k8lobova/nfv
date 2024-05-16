@@ -1,0 +1,10 @@
+[Unit]
+Description=Check Free Space
+Wants=check_space.timer
+
+[Service]
+Type=oneshot
+ExecStart=/home/elobova/.local/lib/python3.11/bin/python3.11 /home/elobova/python-script/check_space.py
+
+[Install]
+WantedBy=multi-user.target

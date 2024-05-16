@@ -1,0 +1,11 @@
+[Unit]
+Description=Check Free Space
+Requires=check_space.service
+
+[Timer]
+Unit=check_space.service
+OnBootSec=10sec
+OnUnitActiveSec=10sec
+
+[Install]
+WantedBy=timer.target
